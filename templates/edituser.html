@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>Zeķītes Ezīšiem</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+<form action="{{url_for('edituser')}}" method="post">
+  
+  <input type="text" id="userid" name="userid" value="{{p1[0]}}" hidden>
+  
+  <label for="username"> Lietotājvārds </label>
+  <input type="text" name="username" id="username" value="{{p1[1]}}">
+
+  <label for="password"> Parole </label>
+  <input type="text" name="password" id="password" value="{{p1[2]}}">
+
+  <label for="email"> E-pasts </label>
+  <input type="text" name="email" id="email" value="{{p1[3]}}">
+
+  <button type="submit">Saglabāt</button>
+</form>
+
+</body>
+</html>

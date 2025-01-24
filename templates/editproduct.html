@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>Zeķītes Ezīšiem</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+<form action="{{url_for('editproduct')}}" method="post">
+
+  <input type="text" id="productid" name="productid" value="{{p1[0]}}" hidden>
+
+  <label for="productname"> Produkta nosaukums </label>
+  <input type="text" name="productname" id="productname" value="{{p1[1]}}">
+
+  <label for="price"> Cena </label>
+  <input type="text" name="price" id="price" value="{{p1[2]}}">
+
+  <label for="description"> Apraksts </label>
+  <input type="text" name="description" id="description" value="{{p1[3]}}">
+
+  <button type="submit">Saglabāt</button>
+</form>
+
+</body>
+</html>

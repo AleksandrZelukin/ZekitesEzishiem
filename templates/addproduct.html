@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Zeķītes Ezīšiem</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+<form action="{{url_for('addproduct')}}" method="post">
+
+  <label for="productname"> Produkta nosaukums </label>
+  <input type="text" name="productname" id="productname">
+
+  <label for="price"> Cena </label>
+  <input type="text" name="price" id="price">
+
+  <label for="description"> Apraksts </label>
+  <input type="text" name="description" id="description">
+
+  <button type="submit">Pievienot jaunu produktu</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Zeķītes Ezīšiem</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+<form action="{{url_for('adduser')}}" method="post">
+
+  <label for="username"> Lietotājvārds </label>
+  <input type="text" name="username" id="username">
+
+  <label for="password"> Parole </label>
+  <input type="text" name="password" id="password">
+
+  <label for="email"> E-pasts </label>
+  <input type="text" name="email" id="email">
+
+  <button type="submit">Pievienot jaunu lietotāju</button>
+</form>
+
+</body>
+</html>

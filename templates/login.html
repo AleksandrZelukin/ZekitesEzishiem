@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<title>Login lapa</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+  <div class="conteiner">
+    <form action="{{url_for('login')}}" method="post">
+      <h2>Ieiet sistēmā</h2>
+      
+      <label for="username"> Lietotājvārds: </label>
+      <input type="text" name="username" id="username" required>
+
+      <label for="password"> Parole: </label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit"> Ieiet sistēmā </button>
+    </form>
+    </form>
+  </div>
+</body>
+</html>

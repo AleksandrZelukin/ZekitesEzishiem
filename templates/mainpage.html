@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>Zeķītes Ezīšiem</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+  <table border="1px">
+  {% for lietotajs in p1 %}
+    <tr>
+      <td>{{lietotajs[0]}}</td>
+      <td>{{lietotajs[1]}}</td>
+      <td>{{lietotajs[2]}}</td>
+      <td>{{lietotajs[3]}}</td>
+      <td>
+        <a href="{{url_for('edituser',id=lietotajs[0])}}">
+          Rediģēt
+        </a>
+      </td>
+      <td>
+        <a href="{{url_for('mainpage',id=lietotajs[0])}}">
+          Dzēst
+        </a>
+      </td>
+    </tr>
+  {% endfor %}
+  </table>
+  <br>
+<a href="{{url_for('adduser')}}"> Pievienot jaunu lietotāju </a>
+
+  <table border="1px">
+    {% for produkts in p2 %}
+      <tr>
+        <td>{{produkts[0]}}</td>
+        <td>{{produkts[1]}}</td>
+        <td>{{produkts[2]}}</td>
+        <td>{{produkts[3]}}</td>
+        <td>
+          <a href="{{url_for('editproduct',id=produkts[0])}}">
+            Rediģēt
+          </a>
+        </td>
+        <td>
+          <a href="{{url_for('mainpage',productid=produkts[0])}}">
+            Dzēst
+          </a>
+        </td>
+      </tr>
+    {% endfor %}
+    </table>
+    <br>
+  <a href="{{url_for('addproduct')}}"> Pievienot jaunu produktu </a>
+  
+</body>
+</html>
