@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
 </head>
 <body>
+  <div>
   <table border="1px">
   {% for lietotajs in p1 %}
     <tr>
@@ -25,9 +26,11 @@
     </tr>
   {% endfor %}
   </table>
+  </div>
   <br>
+  <div>
 <a href="{{url_for('adduser')}}"> Pievienot jaunu lietotāju </a>
-
+</div>
   <table border="1px">
     {% for produkts in p2 %}
       <tr>
